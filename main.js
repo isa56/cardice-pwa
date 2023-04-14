@@ -42,9 +42,11 @@ cardReplaceSelector.addEventListener("change", () => {
   hasCardReplacement = cardReplaceSelector.checked;
 });
 
+/*
 cardJokerSelector.addEventListener("change", () => {
   hasJoker = cardJokerSelector.checked;
 });
+*/
 
 function initializeCards() {
   let numberOfCards = hasJoker ? 54 : 52;
