@@ -238,3 +238,9 @@ footer {
 .dice h1 {
   font-size: 4em;
 }
+
+@media screen and (max-width: 600px) {
+  .dice-number-input {
+    color: white !important;
+  }
+}
