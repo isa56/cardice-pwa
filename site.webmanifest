@@ -1,6 +1,9 @@
 {
     "name": "Cardice",
     "short_name": "Cardice",
+    "prefer_related_applications": true,
+    "start_url": "/",
+    "scope": ".",
     "icons": [
         {
             "src": "/assets/icons/android-chrome-192x192.png",
