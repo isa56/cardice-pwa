@@ -1,4 +1,4 @@
-const cacheName = "cache1.0.4"; // Change value to force update
+const cacheName = "cache1.0.5"; // Change value to force update
 const assets = [
   "/",
   "/assets/icons/android-chrome-36x36.png", // Favicon, Android Chrome M39+ with 0.75 screen density
