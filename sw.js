@@ -51,11 +51,11 @@ const assets = [
   "browserconfig.xml", // IE11 icon configuration file
   "manifest.json", // Manifest file
   "index.html", // Main HTML file
-  "main.js", // Main Javascript file
+  // "main.js", // Main Javascript file
   "/main.js", // Main Javascript file
-  "style.css", // Main CSS file
+  // "style.css", // Main CSS file
   "/style.css", // Main CSS file in folder
-  "fonts.css", // Fonts CSS file
+  // "fonts.css", // Fonts CSS file
   "/fonts.css", // Fonts CSS file in folder
 ];
 

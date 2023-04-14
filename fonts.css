@@ -11,8 +11,8 @@
 @font-face {
   font-family: "Poppins";
   src: local("Poppins Bold"), local("Poppins-Bold"),
-    url("/assets/fonts/Poppins-Bold.woff2") format("woff2"),
-    url("/assets/fonts/Poppins-Bold.woff") format("woff");
+    url("/cardice-pwa/assets/fonts/Poppins-Bold.woff2") format("woff2"),
+    url("/cardice-pwa/assets/fonts/Poppins-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -71,8 +71,8 @@
 @font-face {
   font-family: "Poppins";
   src: local("Poppins Regular"), local("Poppins-Regular"),
-    url("/assets/fonts/Poppins-Regular.woff2") format("woff2"),
-    url("/assets/fonts/Poppins-Regular.woff") format("woff");
+    url("/cardice-pwa/assets/fonts/Poppins-Regular.woff2") format("woff2"),
+    url("/cardice-pwa/assets/fonts/Poppins-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
