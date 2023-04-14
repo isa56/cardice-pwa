@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /.git
 Allow: /
 
-Sitemap: https://simplepwa.com/sitemap.xml
+Sitemap: https://isa56.github.io/cardice-pwa/sitemap.xml

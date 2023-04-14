@@ -241,7 +241,7 @@ footer {
 
 @media screen and (max-width: 600px) {
   .dice-number-input {
-    color: white !important;
+    color: black !important;
   }
 }
 
