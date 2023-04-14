@@ -1,86 +1,203 @@
-html, body {
-	background-color: black;
-	color: white;
-	font-family: helvetica, arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
-	margin: 0;
-	padding: 0;
+:root {
+  --main-color: #fe4365;
+  --cambridge-blue: #92bfb1;
+  --saffron: #f8c537;
+}
+
+html,
+body {
+  background-color: rgb(17, 16, 16);
+  color: white;
+  font-family: "Poppins", helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-	margin: 0 auto;
-	max-width: 768px;
-	padding: 20px 5%;
+  margin: 0 auto;
+  max-width: 768px;
+  padding: 20px 5%;
 }
 
-section {
-	background-color: #171717;
-}
+/* section {
+  background-color: #171717;
+} */
 
-h1, h2 {
-	line-height: 1;
-	text-transform: uppercase;
+h1,
+h2 {
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 h2 {
-	margin-top: 40px;
+  margin-top: 40px;
 }
 
 h2:first-of-type {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 .logo {
-	display: block;
+  display: block;
 }
 
 img {
-	height: auto;
-	max-width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 .logo img {
-	width: 500px;
+  width: 500px;
 }
 
 @media all and (max-width: 768px) {
-	.logo img {
-		width: 450px;
-	}
+  .logo img {
+    width: 450px;
+  }
 }
 
 @media all and (max-width: 479px) {
-	.logo img {
-		width: 350px;
-	}
+  .logo img {
+    width: 350px;
+  }
 }
 
 .icon.heart {
-	color: lightcoral;
+  color: var(--main-color);
 }
 
 a {
-	color: aquamarine;
-	font-weight: bold;
+  color: lightcoral;
+  font-weight: bold;
 }
 
-a:hover, a:active {
-	color: mediumaquamarine;
+a:hover,
+a:active {
+  color: aquamarine;
 }
 
 a code {
-	color: black;
+  color: black;
 }
 
 code {
-	background-color: aquamarine;
-	color: black;
-	font-family: monospace;
-	padding: 1px;
-	user-select: all;
+  background-color: var(--cambridge-blue);
+  color: black;
+  font-family: monospace;
+  padding: 1px;
+  user-select: all;
 }
 
 code.image {
-	background-color: lightyellow;
+  background-color: lightyellow;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+/*  CSS SPECIFIC */
+
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--main-color); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: aquamarine; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid aquamarine; /* creates padding around scroll thumb */
+}
+
+.heading {
+  font-size: 4em;
+  text-align: center;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  margin-bottom: 4em;
+}
+
+.btn-container {
+  align-items: center;
+  display: flex;
+  margin: 1em 0;
+}
+
+.btn {
+  background-color: var(--main-color);
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 5px 10px 20px black;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: lightcoral;
+}
+
+.btn:active {
+  background-color: var(--cambridge-blue);
+}
+
+.cards-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-label {
+  margin: 1em 0;
+}
+
+.card-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1em;
+}
+
+.card {
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 10px 20px black;
+  color: black;
+  display: flex;
+  flex-flow: column;
+  height: 10em;
+  justify-content: space-evenly;
+  margin-top: 2em;
+  padding: 0.5em;
+  width: 6em;
+}
+
+.card-middle-value {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.card-top-value {
+  font-size: 3em;
+  padding: 0.2em;
+  /* display: flex;
+  flex-flow: column;
+  align-items: center; */
 }
