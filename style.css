@@ -126,7 +126,7 @@ header {
 }
 
 section {
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 }
 
 .btn-container {
@@ -197,11 +197,44 @@ section {
 .card-top-value {
   font-size: 3em;
   padding: 0.2em;
-  /* display: flex;
-  flex-flow: column;
-  align-items: center; */
 }
 
 footer {
   text-align: center;
+}
+
+.d-flex {
+  align-items: center;
+  display: flex;
+}
+
+.d-flex h1 {
+  margin-right: 0.5em;
+}
+
+.dice-label {
+  margin: 1em 0.5em;
+}
+
+.dice-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+.dice {
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 5px 10px 20px black;
+  color: black;
+  display: flex;
+  justify-content: center;
+  height: 6em;
+  width: 6em;
+}
+
+.dice h1 {
+  font-size: 4em;
 }

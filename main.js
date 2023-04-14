@@ -8,9 +8,12 @@ let hasCardReplacement = false;
 // HTML Components
 const suitComponent = document.querySelector("#card-top-value");
 const cardValueComponent = document.querySelector("#card-middle-value");
+const diceValueComponent = document.querySelector("#dice");
 const cardBtn = document.querySelector("#card-generator-btn");
+const diceBtn = document.querySelector("#dice-btn");
+const facesNumberInput = document.querySelector("#dice-number");
 const cardReplaceSelector = document.querySelector("#card-replace-selector");
-// const cardJokerSelector = document.querySelector("#card-joker-selector");
+const cardJokerSelector = document.querySelector("#card-joker-selector");
 
 initializeCards();
 
@@ -18,15 +21,17 @@ cardBtn.addEventListener("click", () => {
   selectCard();
 });
 
+diceBtn.addEventListener("click", () => {
+  rollDice();
+});
+
 cardReplaceSelector.addEventListener("change", () => {
   hasCardReplacement = cardReplaceSelector.checked;
 });
 
-/*
 cardJokerSelector.addEventListener("change", () => {
   hasJoker = cardJokerSelector.checked;
 });
-*/
 
 function initializeCards() {
   let numberOfCards = hasJoker ? 54 : 52;
@@ -82,7 +87,16 @@ function selectCard() {
   updateCardHTML(suit, value);
 }
 
+function rollDice() {
+  let randomNumber = generateRandomNumber(1, facesNumberInput.value);
+  updateDiceHTML(randomNumber);
+}
+
 function updateCardHTML(suit, value) {
   suitComponent.textContent = suit;
   cardValueComponent.textContent = value;
+}
+
+function updateDiceHTML(value) {
+  diceValueComponent.textContent = value;
 }
