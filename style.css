@@ -244,3 +244,14 @@ footer {
     color: white !important;
   }
 }
+
+.range {
+  display: flex;
+  margin-top: 0.5em;
+  justify-content: end;
+}
+
+.install-btn button {
+  font-size: 0.8em;
+  margin: 0.5em;
+}

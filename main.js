@@ -11,6 +11,7 @@ const cardValueComponent = document.querySelector("#card-middle-value");
 const diceValueComponent = document.querySelector("#dice");
 const cardBtn = document.querySelector("#card-generator-btn");
 const diceBtn = document.querySelector("#dice-btn");
+const installBtn = document.querySelector("#install-btn");
 const facesNumberInput = document.querySelector("#dice-number");
 const cardReplaceSelector = document.querySelector("#card-replace-selector");
 const cardJokerSelector = document.querySelector("#card-joker-selector");
@@ -24,6 +25,18 @@ cardBtn.addEventListener("click", () => {
 diceBtn.addEventListener("click", () => {
   rollDice();
 });
+/*
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  installBtn.style.display = "block";
+  installBtn.addEventListener("click", () => {
+    e.prompt();
+  });
+});
+
+installBtn.addEventListener("click", () => {
+});
+*/
 
 cardReplaceSelector.addEventListener("change", () => {
   hasCardReplacement = cardReplaceSelector.checked;
