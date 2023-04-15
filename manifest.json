@@ -2,7 +2,7 @@
     "name": "Cardice",
     "short_name": "Cardice",
     "display": "standalone",
-    "start_url": "/",
+    "start_url": "./?utm_source=pwa_install",
     "scope": ".",
     "theme_color": "#111010",
     "background_color": "#000",
