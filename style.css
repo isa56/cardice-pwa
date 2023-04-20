@@ -256,3 +256,15 @@ footer {
   font-size: 0.8em;
   margin: 0.5em;
 }
+
+.card-black {
+  color: black;
+}
+
+.card-red {
+  color: red;
+}
+
+.card-joker {
+  color: purple !important;
+}

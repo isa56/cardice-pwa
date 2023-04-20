@@ -17,6 +17,7 @@ const cardReplaceSelector = document.querySelector("#card-replace-selector");
 const cardJokerSelector = document.querySelector("#card-joker-selector");
 
 initializeCards();
+updateDiceHTML("·");
 
 cardBtn.addEventListener("click", () => {
   selectCard();
@@ -25,6 +26,7 @@ cardBtn.addEventListener("click", () => {
 diceBtn.addEventListener("click", () => {
   rollDice();
 });
+
 /*
 window.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
@@ -33,20 +35,22 @@ window.addEventListener("beforeinstallprompt", (e) => {
     e.prompt();
   });
 });
-
-installBtn.addEventListener("click", () => {
-});
 */
+
+// installBtn.addEventListener("click", () => {});
 
 cardReplaceSelector.addEventListener("change", () => {
   hasCardReplacement = cardReplaceSelector.checked;
+  alert("Adding card replacement! Resetting deck...");
+  initializeCards();
 });
 
-/*
 cardJokerSelector.addEventListener("change", () => {
   hasJoker = cardJokerSelector.checked;
+  // console.log(hasJoker);
+  alert("Adding joker! Resetting deck...");
+  initializeCards();
 });
-*/
 
 function initializeCards() {
   let numberOfCards = hasJoker ? 54 : 52;
@@ -66,7 +70,6 @@ function selectCard() {
   }
   // Call randomNumber
   let randomNumber = generateRandomNumber(0, cards.length - 1);
-  console.log(randomNumber);
   // Selects the card
   let cardId = cards[randomNumber];
   let suit = "";
@@ -77,7 +80,10 @@ function selectCard() {
     cards.splice(randomNumber, 1);
   }
   // Decides the suit
-  if (cardId < 13) {
+  if (cardId > 52) {
+    suit = "J";
+    value = "Joker";
+  } else if (cardId < 13) {
     suit = "♠";
   } else if (cardId < 26) {
     suit = "♣";
@@ -86,6 +92,7 @@ function selectCard() {
   } else {
     suit = "♦";
   }
+
   // Decides the card value
   if (cardValue === 0) {
     value = "A";
@@ -108,6 +115,30 @@ function rollDice() {
 }
 
 function updateCardHTML(suit, value) {
+  if (suit === "J") {
+    cardValueComponent.parentElement.parentElement.classList += " card-joker";
+    cardValueComponent.parentElement.parentElement.classList.remove("card-red");
+    cardValueComponent.parentElement.parentElement.classList.remove(
+      "card-black"
+    );
+  } else if (suit === "♥" || suit === "♦") {
+    cardValueComponent.parentElement.parentElement.classList.replace(
+      "card-black",
+      "card-red"
+    );
+    cardValueComponent.parentElement.parentElement.classList.remove(
+      "card-joker"
+    );
+  } else {
+    cardValueComponent.parentElement.parentElement.classList.replace(
+      "card-red",
+      "card-black"
+    );
+    cardValueComponent.parentElement.parentElement.classList.remove(
+      "card-joker"
+    );
+  }
+
   suitComponent.textContent = suit;
   cardValueComponent.textContent = value;
 }
