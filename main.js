@@ -41,18 +41,23 @@ window.addEventListener("beforeinstallprompt", (e) => {
 
 cardReplaceSelector.addEventListener("change", () => {
   hasCardReplacement = cardReplaceSelector.checked;
-  alert("Adding card replacement! Resetting deck...");
+  alert(
+    `${
+      hasCardReplacement ? "Adding" : "Removing"
+    } card replacement! Resetting deck...`
+  );
   initializeCards();
 });
 
 cardJokerSelector.addEventListener("change", () => {
   hasJoker = cardJokerSelector.checked;
   // console.log(hasJoker);
-  alert("Adding joker! Resetting deck...");
+  alert(`${hasJoker ? "Adding" : "Removing"} joker! Resetting deck...`);
   initializeCards();
 });
 
 function initializeCards() {
+  updateCardHTML("🎴", "CD");
   let numberOfCards = hasJoker ? 54 : 52;
   for (let i = 0; i < numberOfCards; i++) {
     cards[i] = i;
@@ -105,8 +110,7 @@ function selectCard() {
   } else {
     value = cardValue;
   }
-
-  updateCardHTML(suit, value);
+  setTimeout(500, () => updateCardHTML(suit, value));
 }
 
 function rollDice() {
