@@ -7,6 +7,7 @@
 html,
 body {
   background-color: rgb(17, 16, 16);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23f08080' fill-opacity='0.03'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   color: white;
   font-family: "Poppins", helvetica, arial, sans-serif;
   font-size: 14px;
@@ -20,10 +21,6 @@ body {
   max-width: 768px;
   padding: 20px 5%;
 }
-
-/* section {
-  background-color: #171717;
-} */
 
 h1,
 h2 {
@@ -190,8 +187,10 @@ section {
 }
 
 .card-middle-value {
-  font-size: 4em;
+  display: flex !important;
+  font-size: 4em !important;
   font-weight: bold;
+  justify-content: center !important;
 }
 
 .card-top-value {
@@ -239,6 +238,10 @@ footer {
   font-size: 4em;
 }
 
+span.dice-icon {
+  font-size: 4em !important;
+}
+
 @media screen and (max-width: 600px) {
   .dice-number-input {
     background-color: white !important;
@@ -267,4 +270,21 @@ footer {
 
 .card-joker {
   color: purple !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.refresh-icon {
+  animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

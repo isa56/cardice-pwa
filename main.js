@@ -15,6 +15,8 @@ const installBtn = document.querySelector("#install-btn");
 const facesNumberInput = document.querySelector("#dice-number");
 const cardReplaceSelector = document.querySelector("#card-replace-selector");
 const cardJokerSelector = document.querySelector("#card-joker-selector");
+const cardRefreshIcon = document.querySelector("#card-refresh");
+const diceRefreshIcon = document.querySelector("#dice-refresh");
 
 initializeCards();
 updateDiceHTML("·");
@@ -68,7 +70,28 @@ function generateRandomNumber(min = 1, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function refreshAnimationDeactivate(type) {
+  if (type === "dice") {
+    diceRefreshIcon.classList.add("hidden");
+    diceValueComponent.classList.remove("hidden");
+  } else if (type === "card") {
+    cardRefreshIcon.classList.add("hidden");
+    cardValueComponent.classList.remove("hidden");
+  }
+}
+
+function refreshAnimationActivate(type) {
+  if (type === "dice") {
+    diceRefreshIcon.classList.remove("hidden");
+    diceValueComponent.classList.add("hidden");
+  } else if (type === "card") {
+    cardRefreshIcon.classList.remove("hidden");
+    cardValueComponent.classList.add("hidden");
+  }
+}
+
 function selectCard() {
+  refreshAnimationActivate("card");
   if (cards.length === 0) {
     alert("No more cards left! Resetting deck...");
     initializeCards();
@@ -88,6 +111,8 @@ function selectCard() {
   if (cardId > 52) {
     suit = "J";
     value = "Joker";
+    // setTimeout(500, () => updateCardHTML(suit, value));
+    // return;
   } else if (cardId < 13) {
     suit = "♠";
   } else if (cardId < 26) {
@@ -110,12 +135,19 @@ function selectCard() {
   } else {
     value = cardValue;
   }
-  setTimeout(500, () => updateCardHTML(suit, value));
+  setTimeout(() => {
+    updateCardHTML(suit, value);
+    refreshAnimationDeactivate("card");
+  }, 1000);
 }
 
 function rollDice() {
-  let randomNumber = generateRandomNumber(1, facesNumberInput.value);
-  updateDiceHTML(randomNumber);
+  refreshAnimationActivate("dice");
+  setTimeout(() => {
+    let randomNumber = generateRandomNumber(1, facesNumberInput.value);
+    updateDiceHTML(randomNumber);
+    refreshAnimationDeactivate("dice");
+  }, 1000);
 }
 
 function updateCardHTML(suit, value) {

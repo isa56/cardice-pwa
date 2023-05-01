@@ -1,4 +1,4 @@
-const cacheName = "cache1.0.8"; // Change value to force update
+const cacheName = "cache1.0.9"; // Change value to force update
 const assets = [
   "/",
   "/assets/icons/android-chrome-36x36.png", // Favicon, Android Chrome M39+ with 0.75 screen density
@@ -46,6 +46,8 @@ const assets = [
   "/assets/fonts/Poppins-MediumItalic.woff", // Fonts, Poppins Medium Italic
   "/assets/fonts/Poppins-Regular.woff2", // Fonts, Poppins Regular
   "/assets/fonts/Poppins-Regular.woff", // Fonts, Poppins Regular
+  "/assets/fonts/Material-Icons.woff2", // Fonts, Material Icons Outlined
+  "/assets/fonts/Material-Rounded.woff2", // Fonts, Material Icons Rounded
   "/assets/images/logo.png", // Logo
   "/assets/images/share.jpg", // Social media sharing
   "browserconfig.xml", // IE11 icon configuration file
