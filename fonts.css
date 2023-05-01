@@ -1,8 +1,10 @@
 @font-face {
   font-family: "Poppins";
-  src: local("Poppins Bold Italic"), local("Poppins-BoldItalic"),
+  src: local("Poppins Bold Italic"), local("Poppins-Bold-Italic"),
     url("/assets/fonts/Poppins-BoldItalic.woff2") format("woff2"),
-    url("/assets/fonts/Poppins-BoldItalic.woff") format("woff");
+    url("/assets/fonts/Poppins-BoldItalic.woff") format("woff"),
+    url("/cardice-pwa/assets/fonts/Poppins-BoldItalic.woff2") format("woff2"),
+    url("/cardice-pwa/assets/fonts/Poppins-BoldItalic.woff2") format("woff2");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -12,6 +14,7 @@
   font-family: "Poppins";
   src: local("Poppins Bold"), local("Poppins-Bold"),
     url("/assets/fonts/Poppins-Bold.woff2") format("woff2"),
+    url("/assets/fonts/Poppins-Bold.woff") format("woff"),
     url("/cardice-pwa/assets/fonts/Poppins-Bold.woff2") format("woff2"),
     url("/cardice-pwa/assets/fonts/Poppins-Bold.woff") format("woff");
   font-weight: bold;
@@ -23,7 +26,9 @@
   font-family: "Poppins";
   src: local("Poppins Black"), local("Poppins-Black"),
     url("/assets/fonts/Poppins-Black.woff2") format("woff2"),
-    url("/assets/fonts/Poppins-Black.woff") format("woff");
+    url("/assets/fonts/Poppins-Black.woff") format("woff"),
+    url("/cardice-pwa/assets/fonts/Poppins-Black.woff2") format("woff2"),
+    url("/cardice-pwa/assets/fonts/Poppins-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -33,7 +38,9 @@
   font-family: "Poppins";
   src: local("Poppins Light"), local("Poppins-Light"),
     url("/assets/fonts/Poppins-Light.woff2") format("woff2"),
-    url("/assets/fonts/Poppins-Light.woff") format("woff");
+    url("/assets/fonts/Poppins-Light.woff") format("woff"),
+    url("/cardice-pwa/assets/fonts/Poppins-Light.woff2") format("woff2"),
+    url("/cardice-pwa/assets/fonts/Poppins-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -43,7 +50,9 @@
   font-family: "Poppins";
   src: local("Poppins Medium"), local("Poppins-Medium"),
     url("/assets/fonts/Poppins-Medium.woff2") format("woff2"),
-    url("/assets/fonts/Poppins-Medium.woff") format("woff");
+    url("/assets/fonts/Poppins-Medium.woff") format("woff"),
+    url("/cardice-pwa/assets/fonts/Poppins-Medium.woff2") format("woff2"),
+    url("/cardice-pwa/assets/fonts/Poppins-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -53,7 +62,10 @@
   font-family: "Poppins";
   src: local("Poppins Italic"), local("Poppins-Italic"),
     url("/assets/fonts/Poppins-Italic.woff2") format("woff2"),
-    url("/assets/fonts/Poppins-Italic.woff") format("woff");
+    url("/assets/fonts/Poppins-Italic.woff") format("woff"),
+    url("/cardice-pwa/assets/fonts/Poppins-Italic.woff2") format("woff2"),
+    url("/cardice-pwa/assets/fonts/Poppins-Italic.woff") format("woff");
+
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -61,10 +73,11 @@
 
 @font-face {
   font-family: "Poppins";
-  src: local("Poppins Medium Italic"), local("Poppins-MediumItalic"),
-    url("/cardice-pwa/assets/fonts/Poppins-MediumItalic.woff2") format("woff2"),
+  src: local("Poppins Medium Italic"), local("Poppins-Medium-Italic"),
     url("/assets/fonts/Poppins-MediumItalic.woff2") format("woff2"),
-    url("/assets/fonts/Poppins-MediumItalic.woff") format("woff");
+    url("/assets/fonts/Poppins-MediumItalic.woff") format("woff"),
+    url("/cardice-pwa/assets/fonts/Poppins-MediumItalic.woff") format("woff"),
+    url("/cardice-pwa/assets/fonts/Poppins-MediumItalic.woff2") format("woff2");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -73,6 +86,7 @@
 @font-face {
   font-family: "Poppins";
   src: local("Poppins Regular"), local("Poppins-Regular"),
+    url("/assets/fonts/Poppins-Regular.woff") format("woff"),
     url("/assets/fonts/Poppins-Regular.woff2") format("woff2"),
     url("/cardice-pwa/assets/fonts/Poppins-Regular.woff2") format("woff2"),
     url("/cardice-pwa/assets/fonts/Poppins-Regular.woff") format("woff");
