@@ -17,9 +17,11 @@ const cardReplaceSelector = document.querySelector("#card-replace-selector");
 const cardJokerSelector = document.querySelector("#card-joker-selector");
 const cardRefreshIcon = document.querySelector("#card-refresh");
 const diceRefreshIcon = document.querySelector("#dice-refresh");
+const preLoadRefreshIcon = document.querySelector("#pre-icon-refresh");
 
+// Initialize
 initializeCards();
-updateDiceHTML("·");
+setTimeout(() => preLoadRefreshIcon.classList.add("hidden"), 1000);
 
 cardBtn.addEventListener("click", () => {
   selectCard();
@@ -53,7 +55,6 @@ cardReplaceSelector.addEventListener("change", () => {
 
 cardJokerSelector.addEventListener("change", () => {
   hasJoker = cardJokerSelector.checked;
-  // console.log(hasJoker);
   alert(`${hasJoker ? "Adding" : "Removing"} joker! Resetting deck...`);
   initializeCards();
 });

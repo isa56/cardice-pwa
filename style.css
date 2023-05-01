@@ -280,6 +280,10 @@ span.dice-icon {
   animation: rotate 1s infinite;
 }
 
+.pre-icon {
+  font-size: 1px !important;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
